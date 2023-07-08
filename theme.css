@@ -1,0 +1,82 @@
+
+/* comments
+good practice to have 
+
+body { 
+	font-family: Arial, san-serif;<div style="background-color:white; color:#31394D; padding:20px;">
+}
+
+ */
+ body{
+	 color:#31394D;
+	background-color:#edede8;
+ }
+	 
+ h1.topline {
+	 padding-top:100px;
+		color: #31394D;
+		font-size: 30pt;
+		text-transform: capitalize;
+		text-align: center;
+ }	
+.logo{
+	   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  padding-top:10px;
+}
+p {
+	background-color:#edede8;
+}
+.Twitter{
+	   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3%;
+  background-color:#edede8;
+}
+.insta{
+	   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3%;
+  background-color:#edede8;
+}
+.youtube{
+	   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3%;
+  background-color:#edede8;
+}
+.Twitch{
+	   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3%;
+  background-color:#edede8;
+}
+.Twitch2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3%;
+  background-color:#edede8;
+}
+  h3.footer {
+color: #31394D;
+		font-size: 15pt;
+		text-transform: capitalize;
+		text-align: center;
+ }	
+ 
+  h3.page {
+color: #31394D;
+		font-size: 5pt;
+		text-transform: capitalize;
+		text-align: center;
+ }	
+ 
+
+
