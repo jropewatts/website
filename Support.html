@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="theme.css">
+<title>The Demon Projects : Contact Us</title>
+ <script>
+        function updateCount() {
+            var textarea = document.getElementById("message");
+            var count = document.getElementById("count");
+            count.innerHTML = textarea.value.length;
+        }
+    </script>
+</head>
+<body>
+
+<p class=support > Please make a ticket and someone will be with you in 14 day.<br> If you have any ideas pleae also leave your contact details as I am more then happy to listen </p>
+     <form action="mailto:jropewatts@hotmail.co.uk" method="post" enctype="text/plain"class=form>
+        Your Email: optional <br>
+        <input type="email" name="from"style="width: 100%; height: 20px;" ><br>
+        Message:<br>
+        <textarea id="message" name="message" maxlength="1000" oninput="updateCount()"style="width: 100%; height: 150px;"></textarea><br>
+        <span id="count">0</span> / 1000 characters<br>
+        <input type="submit" value="Send">
+    </form>
+<h3 class=footer align="center"><font color="#31394D">@2023 Demonprojects.com<br> a simple page </font>
+<h3  class=page align="center">	<a href="index.html"> Home </a> <br>	<a href="socailmedia.html"> Socail Media <br> Gaming </a> <br> <a href="Toolsandprojects.html"> Tools and projects</a> <br> <a href="Support.html"> Contact Us</a> </h3>
+</body>
+</html>
+

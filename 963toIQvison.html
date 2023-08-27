@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="theme.css">
+<title>The Demon Projects: 963 to IQvison Tool</title>
+</head>
+<body>
+
+<h2> Welcome to the convertion tool <br>
+This tool allows you to take the 963 Export of the schematics and cover them quick and easily to a uses full IQvision version</h2>
+<p class=listtile>Intstuction</p>
+<ul class=list> 
+<li> Follow the trend 963 export progress and make sure import correctly in to IQvision</li>
+<li> Open the PX page in Text Editor view copy and paste every line that start with '<BoundLabel' in to the 963 string box then click "convert"</li>
+<li> once it is done click the copy button at the bottom of the output page and paste it back in to the text editor in IQvison</li>
+<li> then change back to the PX editor and all being well great, if not contact support <a href="index.html"> here </a></li>
+ </ul>
+ 
+<p class=listtile>Exceptions</p>
+<ul class=list> 
+<li> All time schedule (Z point) will not change and will still show as red flashing iteems on the page</li>
+<li> As is stand in this version all the history will need to be manual changed. The point on the page is current set up as all sensors have a historyOrd that will not work</li>
+<li> All point display the lable name and the point state if this is needing to be change this can be quickly done with find and replace in text editor by finding '%displayName% ' and replacing it with nothing</li>
+<li> any issuse at all submit them <a href="index.html"> here </a></li>
+ </ul>
+
+	<p>Font style example 
+    <textarea id="select1" rows="20" cols="100" style="width: 100%; height: 20px;">font="bold 12.0pt Arial"</textarea></p>
+	
+	<p>Font colour example		
+    <textarea id="select3" rows="20" cols="100"style="width: 100%; height: 20px;"> foreground="#404040"</textarea></p>
+	
+	<p>Ord prefix for Sensors, Digital In and Drivers		
+    <textarea id="select2" rows="20" cols="100" style="width: 100%; height: 20px;">BoundLabelBinding ord="station:|slot:/Drivers/TREND/SITE/</textarea></p>
+	
+	<p>Ord prefix for Switches
+    <textarea id="select4" rows="20" cols="100"style="width: 100%; height: 20px;" >SetPointBinding ord="station:|slot:/Drivers/TREND/SITE/</textarea></p>
+	
+	<p>Ord prefix for Knobs
+    <textarea id="select5" rows="20" cols="100"style="width: 100%; height: 20px;" >ActionBinding ord="station:|slot:/Drivers/TREND/SITE/</textarea></p>
+	
+	<p>ValueBinding for Knobs
+    <textarea id="select6" rows="20" cols="100" style="width: 100%; height: 20px;">ValueBinding ord="station:|slot:/Drivers/TREND/SITE/</textarea></p>
+	
+	<p>
+	963 string
+	<textarea id="text" rows="20" cols="100"style="width: 100%; height: 20%" ></textarea></p>
+	
+	<button onclick="convert()">Convert</button>
+	
+	<p>IQvison Friendly Output
+	<textarea id="output" rows="20" cols="100" style="width: 100%; height: auto;"></textarea></p>
+	
+    <button onclick="copyToClipboard()">Copy text</button>
+
+<footer>
+<h3 align="center"><font color="#31394D">@2023 Demonprojects.com<br> a simple page </font>
+<h3  align="center">	<a href="index.html"> Home </a> <br>	<a href="socailmedia.html"> Socail Media <br> Gaming </a> <br> <a href="Toolsandprojects.html"> Tools and projects</a> <br> <a href="Support.html"> Contact Us</a> </h3>
+</footer>
+	
+  	<script type="text/javascript">
+
+function convert() {
+  let text1 = document.getElementById("select1").value;
+  let text2 = document.getElementById("select2").value;
+    let text3 = document.getElementById("select3").value;
+    let text4 = document.getElementById("select4").value;
+    let text5 = document.getElementById("select5").value;
+	let text6 = document.getElementById("select6").value;
+  let text = document.getElementById("text").value;
+  let regex = /<BoundLabel layout="(\d+\.\d+,\d+\.\d+,\d+\.\d+,\d+\.\d+)""/g;
+  let newText = "";
+  
+  text.split("\n").forEach((line) => {
+  
+    if (line.includes("I"))  {
+      let newLine = line.replace(regex, '<BoundLabel layout="$1 " ' );
+		newLine = newLine.replace(/L(\d{2})/i, '\n<' +[text2] + 'L0$1')
+		newLine = newLine.replace(/font="[^"]*"/i, '');
+		newLine = newLine.replace(/foreground="[^"]*"/i, 'summary="%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.%">\n <ObjectToString name="text" format="%displayName% %out.value%"/>\n  </BoundLabelBinding>\n  </BoundLabel> \n');
+        newLine = newLine.replace(/text="192\.168\.30\.17:10008\//i, '' +[text1]+[text3] + '>' );
+        let num = newLine.match(/[I](\d+)/)[1];
+        newLine = newLine.replace(/[I]\d+/, `${newLine.match(/[I]/)}${num.padStart(4, '0')}`);
+        newLine = newLine.replace(/ blink="true"/i,'');
+      	newText += newLine + "\n";
+        
+    } else if (line.includes("D")) {
+      let newLine = line.replace(regex, '<BoundLabel layout="$1" ');
+	   newLine = newLine.replace(/L(\d{2})/i, '\n<' +[text2] + 'L0$1')
+     	 newLine = newLine.replace(/font="[^"]*"/i,'');
+		   	newLine = newLine.replace(/foreground="[^"]*"/i, 'summary="%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.%">\n <ObjectToString name="text" format="%displayName% %out.value%"/>\n  </BoundLabelBinding>\n  </BoundLabel> \n');
+        newLine = newLine.replace(/text="192\.168\.30\.17:10008\//i, '' +[text1]+[text3] + '>' );
+        let num = newLine.match(/[D](\d+)/)[1];
+        newLine = newLine.replace(/[D]\d+/, `${newLine.match(/[D]/)}${num.padStart(4, '0')}`);
+        newLine = newLine.replace(/ blink="true"/i,'');
+      	newText += newLine + "\n";
+        
+    } else if (line.includes("S")) {
+      let newLine = line.replace(regex, '<BoundLabel layout="$1"');
+	   newLine = newLine.replace(/L(\d{2})/i, '\n<' +[text2] + 'L0$1')
+      	newLine = newLine.replace(/font="[^"]*"/i,'');
+    	newLine = newLine.replace(/foreground="[^"]*"/i, 'summary="%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.%">\n <ObjectToString name="text" format="%displayName% %out.value%"/>\n  </BoundLabelBinding>\n <PopupBinding ord="history:/placeholder" title=""/> \n </BoundLabel> \n');
+              newLine = newLine.replace(/text="192\.168\.30\.17:10008\//i,''+[text1]+[text3] + '>');
+        let num = newLine.match(/[S](\d+)/)[1];
+        newLine = newLine.replace(/[S]\d+/, `${newLine.match(/[S]/)}${num.padStart(4, '0')}`);
+        newLine = newLine.replace(/ blink="true"/i,'');
+      	newText += newLine + "\n";
+        
+          } else if (line.includes("W")) {
+      let newLine = line.replace(regex, '<BoundLabel layout="$1"');
+      	newLine = newLine.replace(/BoundLabel layout="/i,'' + 'ToggleButton layout="'+ [text1]);
+		newLine = newLine.replace(/L(\d{2})/i, '\n<' +[text4] + 'L0$1')
+		newLine = newLine.replace(/font="[^"]*"/i,'');
+		newLine = newLine.replace(/foreground="[^"]*"/i, '');
+        newLine = newLine.replace(/text="192\.168\.30\.17:10008\//i,'' +[text1]+ '>' );
+        let num = newLine.match(/[W](\d+)/)[1];
+        newLine = newLine.replace(/[W]\d+/, `${newLine.match(/[W]/)}${num.padStart(4, '0')}`);
+        newLine = newLine.replace(/ blink="true"/i,'summary="%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.%   " widgetEvent="actionPerformed" widgetProperty="selected"> \n summary="%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.%   " widgetEvent="actionPerformed" widgetProperty="selected"> \n <IStatusToBrush name="foreground" mode="foreground"/>\n <IStatusToBrush name="background"/> \n <ObjectToString name="text" format="%displayName% %out.value%"/> \n </SetPointBinding> \n <WsAnnotation name="wsAnnotation" value="58,58,8"/> \n  <ValueBinding/>  \n </ToggleButton>\n');
+         newText += newLine + "\n";
+        
+      } else if (line.includes("K")) {
+    let newLine = line.replace(regex, '<BoundLabel layout="$1"');
+    newLine = newLine.replace(/BoundLabel layout="/i,'ImageButton layout="' );		
+    newLine = newLine.replace(/foreground="[^"]*"/i, '' );
+    newLine = newLine.replace(/L(\d{2})/i, '>\n<' + [text5] + 'L0$1')
+    newLine = newLine.replace(/text="192\.168\.30\.17:10008\//i, '' );
+    let num = newLine.match(/[K](\d+)/)[1];
+    newLine = newLine.replace(/[K]\d+/, `${newLine.match(/[K]/)}${num.padStart(4, '0')}` +'');
+    newLine = newLine.replace(/ blink="true"/i,'' ); 
+	newLine = newLine.replace(/" font="[^"]*"/i, '/set" widgetEvent="actionPerformed"/>\n<WsAnnotation name="wsAnnotation" value="6,6,8"' );
+    newText += newLine + '' ;
+    newText += '\n<' + [text6] + 'L' + line.match(/L(\d+)/)[1].padStart(3,'0') + '/O' + line.match(/O(\d+)/)[1].padStart(2,'0') + '/K' + line.match(/K(\d+)/)[1].padStart(4,'0') + '" summary="%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.% &#xa;  " popupEnabled="false">\n<ObjectToString name="text" format=" %displayName% %out.value%"/>\n</ValueBinding>\n</ImageButton>\n\n' ;   
+      
+   } else {
+      newText += line + "\n";
+    }
+  });
+  
+  newText = newText.replace(/L(\d{2})/g, 'L$1').replace(/O(\d{2})/g, 'O0$1'+ '/points')
+ 
+  
+  document.getElementById("output").value = newText;
+}
+
+
+function copyToClipboard() {
+  let copyText = document.getElementById("output");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+	</script>
+</body>
+</html>
+
