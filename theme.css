@@ -22,14 +22,12 @@ body {
 		text-align: center;
 		text-decoration: none;
  }	
- h1.phead {
-	        margin-left: auto;
-		margin-right: auto;
-		color: #31394D;
-		font-size: 29pt;
-		text-transform: capitalize;
-		text-align: center;
-		text-decoration: none;
+
+.phead {
+	       color: #31394D;
+	font-size: 30pt;
+	text-decoration: none;
+	text-align: center;
 	
  }
 		
@@ -47,7 +45,8 @@ body {
 	color: #31394D;
 	font-size: 30pt;
 	text-decoration: none;
-	text-align: center;	
+	text-align: center;
+	text-decoration: none;
 }
 
 .main1 {
