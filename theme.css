@@ -20,11 +20,12 @@ body {
 		text-align: center;
 		text-decoration: none;
  }	
- h2.pageheading {
-		color: #31394D;
+ h2.phead {
+	 color: #31394D;
 		font-size: 26pt;
 		text-transform: capitalize;
 		text-align: center;
+ }
 		
 .logo{
 	   max-width:100%;
