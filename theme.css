@@ -24,12 +24,10 @@ body {
  }	
 
 .phead {
-	       color: #31394D;
+	color: #31394D;
 	font-size: 30pt;
-	text-decoration: none;
 	text-align: center;
-	
- }
+}
 		
 .logo{
 	   max-width:100%;
