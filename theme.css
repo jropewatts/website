@@ -22,13 +22,15 @@ body {
 		text-align: center;
 		text-decoration: none;
  }	
- h2.phead {
-	 margin-left: auto;
+ h1.phead {
+	        margin-left: auto;
 		margin-right: auto;
-	 color: #31394D;
-		font-size: 28pt;
+		color: #31394D;
+		font-size: 29pt;
 		text-transform: capitalize;
 		text-align: center;
+		text-decoration: none;
+	
  }
 		
 .logo{
