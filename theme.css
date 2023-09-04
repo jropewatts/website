@@ -12,22 +12,31 @@ body {
 	background-color:#edede8;
  }
 	 
- h1.topline {
+h1.topline {
 	 padding-top:100px;
-	        margin-left: auto;
-		margin-right: auto;
 		color: #31394D;
 		font-size: 30pt;
 		text-transform: capitalize;
 		text-align: center;
 		text-decoration: none;
  }	
-
-.phead {
-	color: #31394D;
-	font-size: 30pt;
-	text-align: center;
-}
+ 
+  h1.secondline {
+	 padding-top:50px;
+		color: #31394D;
+		font-size: 30pt;
+		text-transform: capitalize;
+		text-align: center;
+		text-decoration: none;
+ }	
+ 
+ 
+ h1.thirdline {
+		color: #31394D;
+		font-size: 28pt;
+		text-transform: capitalize;
+		text-align: center;
+		text-decoration: none;}
 		
 .logo{
 	   max-width:100%;
