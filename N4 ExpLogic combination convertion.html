@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="theme.css">
+<title>The Demon Projects: N4 ExpLogic combination convertion</title>
+</head>
+<body>
+
+<h1 class=secondline> N4 ExpLogic combination convertion</h1>
+
+
+<table style="width:20%" >
+  <tr>
+    <th></th>
+    <th >E</th>
+    <th >F</th>
+    <th >G</th>
+    <th >H</th>
+  </tr>
+  <tr>
+    <td>J</td>
+    <td><textarea id="select1" rows="2" cols="2"  style="resize:none"></textarea></td>
+    <td><textarea id="select2" rows="2" cols="2"  style="resize:none"> </textarea></td>
+    <td><textarea id="select3" rows="2" cols="2"  style="resize:none"> </textarea></td>
+    <td><textarea id="select4" rows="2" cols="2"  style="resize:none"> </textarea></td>
+  </tr>
+   <tr>
+    <td>K</td>
+    <td><textarea id="select5" rows="2" cols="2"  style="resize:none"> </textarea></td>
+    <td><textarea id="select6" rows="2" cols="2"  style="resize:none"> </textarea></td>
+    <td><textarea id="select7" rows="2" cols="2"  style="resize:none"> </textarea></td>
+    <td><textarea id="select8" rows="2" cols="2"  style="resize:none"> </textarea></td>
+  </tr>
+   <tr>
+    <td>L</td>
+    <td><textarea id="select9" rows="2" cols="2"  style="resize:none"> </textarea></td>
+    <td><textarea id="select10" rows="2" cols="2" style="resize:none"> </textarea></td>
+    <td><textarea id="select11" rows="2" cols="2" style="resize:none"> </textarea></td>
+    <td><textarea id="select12" rows="2" cols="2" style="resize:none"> </textarea></td>
+  </tr>
+   <tr>
+    <td>M</td>
+    <td><textarea id="select13" rows="2" cols="2" style="resize:none"> </textarea></td>
+    <td><textarea id="select14" rows="2" cols="2" style="resize:none"> </textarea></td>
+    <td><textarea id="select15" rows="2" cols="2" style="resize:none"> </textarea></td>
+    <td><textarea id="select16" rows="2" cols="2" style="resize:none"> </textarea></td>
+  </tr>
+
+</table>
+<br>
+
+<button id="convertButton">Convert</button>
+
+<p> Output
+	<textarea id="output" rows="20" cols="100" style="width: 100%; height: auto;"></textarea></p>
+	
+	 <button onclick="copyToClipboard()">Copy text</button>
+
+
+  <button id="ClearFields" onclick="ClearFields()">Clear</button>
+
+ 
+<footer>
+<h3 align="center"><font color="#31394D">@2023 Demonprojects.com<br> a simple page </font>
+<h3  align="center">	<a href="index.html"> Home </a> <br>	<a href="socailmedia.html"> Socail Media <br> Gaming </a> <br> <a href="Toolsandprojects.html"> Tools and projects</a> <br> <a href="Support.html"> Contact Us</a> </h3>
+</footer>
+
+
+    
+<script>
+document.getElementById("convertButton").addEventListener("click", convert);
+function convert() {
+  let select1 = document.getElementById("select1").value.trim();
+  let select2 = document.getElementById("select2").value.trim();
+  let select3 = document.getElementById("select3").value.trim();
+  let select4 = document.getElementById("select4").value.trim();
+  let select5 = document.getElementById("select5").value.trim();
+  let select6 = document.getElementById("select6").value.trim();
+  let select7 = document.getElementById("select7").value.trim();
+  let select8 = document.getElementById("select8").value.trim();
+  let select9 = document.getElementById("select9").value.trim();
+  let select10 = document.getElementById("select10").value.trim();
+  let select11 = document.getElementById("select11").value.trim();
+  let select12 = document.getElementById("select12").value.trim();
+  let select13 = document.getElementById("select13").value.trim();
+  let select14 = document.getElementById("select14").value.trim();
+  let select15 = document.getElementById("select15").value.trim();
+  let select16 = document.getElementById("select16").value.trim();
+  
+  let output = document.getElementById("output");
+  output.value = "";
+   
+
+		// Group 1: select1 to select4
+			if (select1 === "T") {
+			output.value += "inA";
+			} else if (select1 === "F") {
+			output.value += "not inA";
+			} else if (select1 !== "") {
+			output.value += "Error: Only T or F are allowed";
+			}
+			
+   if (select2 === "T") {
+    if (output.value !== "") {
+      output.value += " and ";
+    }
+    output.value += "inB";
+  } else if (select2 === "F") {
+    if (output.value !== "") {
+      output.value += " and ";
+    }
+    output.value += "not inB";
+  } else if (select2 !== "") {
+    if (output.value !== "") {
+      output.value += "\n";
+    }
+    output.value += "Error: Only T or F are allowed";
+  }
+  
+  
+  if (select3 === "T") {
+    if (output.value !== "") {
+      output.value += " and ";
+    }
+    output.value += "inC";
+  } else if (select3 === "F") {
+    if (output.value !== "") {
+      output.value += " and ";
+    }
+    output.value += "not inC";
+  } else if (select3 !== "") {
+    if (output.value !== "") {
+      output.value += "\n";
+    }
+    output.value += "Error: Only T or F are allowed";
+  }
+  
+  
+   if (select4 === "T") {
+    if (output.value !== "") {
+      output.value += " and ";
+    }
+    output.value += "inD";
+  } else if (select4 === "F") {
+    if (output.value !== "") {
+      output.value += " and ";
+    }
+    output.value += "not inD";
+  } else if (select4 !== "") {
+    if (output.value !== "") {
+      output.value += "\n";
+    }
+	output.value += "Error: Only T or F are allowed";
+	}
+	if(select5!== '' || select6!== '' || select7!== '' || select8!== ''){
+		output. value+= ' or '
+	}else{
+		output. value+= '\n'
+	}
+	
+	
+	// Group 2: select5 to select8
+	if (select5 === "T") {
+		if (output. value!== '') {
+		  output. value+= ' '
+		}
+		output. value+= 'inA'
+	  } else if(select5=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' '
+	  	}
+	  	output. value+= 'not inA'
+	  }else if(select5!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+
+	  if(select6=== 'T'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'inB'
+	  }else if(select6=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'not inB'
+	  }else if(select6!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+	  
+	  
+	  if(select7=== 'T'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'inC'
+	  }else if(select7=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'not inC'
+	  }else if(select7!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+	  
+	  
+	  if(select8=== 'T'){
+			if(output. value!== ''){
+				output. value+= ' and '
+			}
+			output. value+= 'inD'
+		}else if(select8=== 'F'){
+			if(output. value!== ''){
+				output. value+= ' and '
+			}
+			output. value+= 'not inD'
+		}else if(select8!== ''){
+			if(output. value!== ''){
+				output. value+= '\n'
+			}
+			output. value+= 'Error: Only T or F are allowed'
+		}
+		
+	if(select9!== '' || select10!== '' || select11!== '' || select12!== ''){
+		output. value+= ' or '
+	}else{
+		output. value+= '\n'	}
+		
+			// Group 3: select9 to select12
+	if (select9 === "T") {
+		if (output. value!== '') {
+		  output. value+= ' '
+		}
+		output. value+= 'inA'
+	  } else if(select9=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' '
+	  	}
+	  	output. value+= 'not inA'
+	  }else if(select9!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+
+	  if(select10=== 'T'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'inB'
+	  }else if(select10=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'not inB'
+	  }else if(select10!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+	  if(select11=== 'T'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'inC'
+	  }else if(select11=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'not inC'
+	  }else if(select11!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+	  if(select12=== 'T'){
+			if(output. value!== ''){
+				output. value+= ' and '
+			}
+			output. value+= 'inD'
+		}else if(select12=== 'F'){
+			if(output. value!== ''){
+				output. value+= ' and '
+			}
+			output. value+= 'not inD'
+		}else if(select12!== ''){
+			if(output. value!== ''){
+				output. value+= '\n'
+			}
+			output. value+= 'Error: Only T or F are allowed'
+		}
+		
+	
+if(select13!== '' || select14!== '' || select15!== '' || select16!== ''){
+		output. value+= ' or '
+	}else{
+		output. value+= '\n'	}
+		
+			// Group 3: select9 to select12
+	if (select13 === "T") {
+		if (output. value!== '') {
+		  output. value+= ' '
+		}
+		output. value+= 'inA'
+	  } else if(select13=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' '
+	  	}
+	  	output. value+= 'not inA'
+	  }else if(select13!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+
+	  if(select14=== 'T'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'inB'
+	  }else if(select14=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'not inB'
+	  }else if(select14!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+	  if(select15=== 'T'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'inC'
+	  }else if(select15=== 'F'){
+	  	if(output. value!== ''){
+	  		output. value+= ' and '
+	  	}
+	  	output. value+= 'not inC'
+	  }else if(select15!== ''){
+	  	if(output. value!== ''){
+	  		output. value+= '\n'
+	  	}
+	  	output. value+= 'Error: Only T or F are allowed'
+	  }
+	  if(select16=== 'T'){
+			if(output. value!== ''){
+				output. value+= ' and '
+			}
+			output. value+= 'inD'
+		}else if(select16=== 'F'){
+			if(output. value!== ''){
+				output. value+= ' and '
+			}
+			output. value+= 'not inD'
+		}else if(select16!== ''){
+			if(output. value!== ''){
+				output. value+= '\n'
+			}
+			output. value+= 'Error: Only T or F are allowed'
+		}
+
+
+	
+		
+	if (!output.value.startsWith("Error")) {
+		output.value = '' + output.value + ' as \'out\'';
+	  
+}
+}
+
+function copyToClipboard() {
+  let copyText = document.getElementById("output");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+ 
+ 
+    function ClearFields() {
+      document.getElementById("select1").value = "";
+      document.getElementById("select2").value = "";
+      document.getElementById("select3").value = "";
+      document.getElementById("select4").value = "";
+
+ 			    document.getElementById("select5").value = "";
+					    document.getElementById("select6").value = "";
+						    document.getElementById("select7").value = "";
+							    document.getElementById("select8").value = "";
+								    document.getElementById("select9").value = "";
+									    document.getElementById("select10").value = "";
+										    document.getElementById("select11").value = "";
+											    document.getElementById("select12").value = "";
+												    document.getElementById("select13").value = "";
+													    document.getElementById("select14").value = "";
+														    document.getElementById("select15").value = "";
+															    document.getElementById("select16").value = "";
+																    document.getElementById("output").value = "";
+}
+</script>
+  	
+</body>
+</html>
+
