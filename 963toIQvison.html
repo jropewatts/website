@@ -52,7 +52,7 @@
 	<p>IQvison Friendly Output
 	<textarea id="output" rows="20" cols="100" style="width: 100%; height: auto;"></textarea></p>
 	
-    <button onclick="copyToClipboard()">Copy text</button>
+    <button onclick="copyToClipboard()">Copy text</button> <button id="ClearFields" onclick="ClearFields()">Clear</button>
 
 <footer>
 <h3 align="center"><font color="#31394D">@2023 Demonprojects.com<br> a simple page </font>
@@ -150,6 +150,11 @@ function copyToClipboard() {
   copyText.setSelectionRange(0, 99999); /*For mobile devices*/
   document.execCommand("copy");
   alert("Copied the text: " + copyText.value);
+}
+
+		 function ClearFields() {
+      document.getElementById("text").value = "";
+      document.getElementById("output").value = "";
 }
 	</script>
 </body>
