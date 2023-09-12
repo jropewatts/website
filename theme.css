@@ -37,7 +37,12 @@ h1.topline {
 		text-transform: capitalize;
 		text-align: center;
 		text-decoration: none;}
-		
+ footer {
+	 text-align:center;
+	 color: #31394D;
+	 font-size: 100%;
+	 }	
+
 .logo{
 	   max-width:100%;
 	   height:auto;	   
