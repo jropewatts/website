@@ -38,9 +38,10 @@ h1.topline {
 		text-align: center;
 		text-decoration: none;}
  footer {
+	 padding-top:50px;
 	 text-align:center;
 	 color: #31394D;
-	 font-size: 100%;
+	 font-size: 25pt;
 	 }	
 
 .logo{
