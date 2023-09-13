@@ -55,38 +55,27 @@ h1.topline {
 		padding-top:10px;
 }
 
-
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+/* Left and right column */
 .column.side {
- 	width: 50%;
-  	text-align: center;
-	text-decoration: none; 
-	text-transform: capitalize;
-	width: 30%
-	color: #31394D;
-
-.main1 {
-	     padding-bottom:200px;
-		padding-left:20%;
-		float: left;
-		
-		font-size: 30pt;
-		
-		text-align: center;	
-		
-        
+  width: 50%;
+    text-align: center;
 }
-.main2 {
-	 padding-bottom:200px;
-	padding-right:20%;
-	float: right;
-	width: 30%
-		color: #31394D;
-		font-size: 30pt;
-		text-transform: capitalize;
-		text-align: center;	
-		text-decoration: none; 
-       
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
 
 .tool {
 	color: #31394D;
