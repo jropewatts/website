@@ -3,13 +3,14 @@
 good practice to have 
 
 body { 
-	font-family: Arial, san-serif;<div style="background-color:white; color:#31394D; padding:20px;">
+	, san-serif;<div style="background-color:white; color:#31394D; padding:20px;">
 }
 
  */
  body{
-	 color:#31394D;
-	background-color:#edede8;
+	 font-family: Arial
+	 color: #31394D;
+	 background-color: #edede8;
  }
 	 
 h1.topline {
