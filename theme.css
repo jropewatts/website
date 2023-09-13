@@ -43,7 +43,7 @@ h1.thirdline {
 }
 
 /* Create three unequal columns that floats next to each other */
-.row {
+.colums {
   float: left;
   padding: 10px;
 }
