@@ -7,9 +7,6 @@ body {
 	align-items: center;
  }
 
-a {
-	text-decoration: none; 
-  }
 h1.topline {
 	padding-top:100px;
 	color: #31394D;
@@ -48,6 +45,7 @@ h1.thirdline {
 	width: 20%;
 	padding-top:10px;
 }
+
 .col {
 	column-count: 2;
 	width: 50%;
@@ -56,6 +54,7 @@ h1.thirdline {
 	font-size: 28pt;
 	text-transform: capitalize;
 	}
+
 .tool {
 	color: #31394D;
 	font-size: 28pt;
