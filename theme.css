@@ -56,17 +56,23 @@ h1.topline {
 }
 
 
+.column.side {
+ 	width: 50%;
+  	text-align: center;
+	text-decoration: none; 
+	text-transform: capitalize;
+	width: 30%
+	color: #31394D;
 
 .main1 {
 	     padding-bottom:200px;
 		padding-left:20%;
 		float: left;
-		width: 30%
-		color: #31394D;
+		
 		font-size: 30pt;
-		text-transform: capitalize;
+		
 		text-align: center;	
-		text-decoration: none; 
+		
         
 }
 .main2 {
