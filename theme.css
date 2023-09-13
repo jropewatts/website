@@ -1,7 +1,10 @@
 body {
-	 font-family: Arial
-	 color: #31394D;
-	 background-color: #edede8;
+	font-family: Arial
+	color: #31394D;
+	background-color: #edede8;
+	display: flex;
+    	flex-direction: column;
+	align-items: center;
  }	 
 h1.topline {
 	padding-top:100px;
@@ -42,28 +45,12 @@ h1.thirdline {
 	padding-top:10px;
 }
 
-/* Create three unequal columns that floats next to each other */
-.colums {
-  float: left;
-  padding: 10px;
-}
-/* Left and right column */
-.column.side {
-  width: 50%;
-    text-align: center;
-}
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
 
+.column {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
 .tool {
 	color: #31394D;
 	font-size: 28pt;
