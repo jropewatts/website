@@ -1,43 +1,30 @@
-
-/* comments
-good practice to have 
-
-body { 
-	, san-serif;<div style="background-color:white; color:#31394D; padding:20px;">
-}
-
- */
- body{
+body {
 	 font-family: Arial
 	 color: #31394D;
 	 background-color: #edede8;
- }
-	 
+ }	 
 h1.topline {
-	 padding-top:100px;
-		color: #31394D;
-		font-size: 30pt;
-		text-transform: capitalize;
-		text-align: center;
-		text-decoration: none;
+	padding-top:100px;
+	color: #31394D;
+	font-size: 30pt;
+	text-transform: capitalize;
+	text-align: center;
+	text-decoration: none;
  }	
- 
-  h1.secondline {
-	 padding-top:50px;
-		color: #31394D;
-		font-size: 30pt;
-		text-transform: capitalize;
-		text-align: center;
-		text-decoration: none;
+ h1.secondline {
+	padding-top:50px;
+	color: #31394D;
+	font-size: 30pt;
+	text-transform: capitalize;
+	text-align: center;
+	text-decoration: none;
  }	
- 
- 
- h1.thirdline {
-		color: #31394D;
-		font-size: 28pt;
-		text-transform: capitalize;
-		text-align: center;
-		text-decoration: none;}
+h1.thirdline {
+	color: #31394D;
+	font-size: 28pt;
+	text-transform: capitalize;
+	text-align: center;
+	text-decoration: none;}
  footer {
 	 padding-top:50px;
 	 text-align:center;
@@ -45,18 +32,18 @@ h1.topline {
 	 font-size: 20pt;
 	 }	
 
-.logo{
-	   max-width:100%;
-	   height:auto;	   
-	   display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 20%;
-		padding-top:10px;
+.logo
+	max-width:100%;
+	height:auto;	   
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+	padding-top:10px;
 }
 
 /* Create three unequal columns that floats next to each other */
-.column {
+.row {
   float: left;
   padding: 10px;
 }
