@@ -35,7 +35,7 @@ h1.thirdline {
 	 font-size: 20pt;
 	 }	
 
-.logo
+.logo {
 	max-width:100%;
 	height:auto;	   
 	display: block;
@@ -44,12 +44,14 @@ h1.thirdline {
 	width: 20%;
 	padding-top:10px;
 }
-
-
-.column {
-    display: inline-block;
-    vertical-align: top;
-    width: 50%;
+.col {
+	column-count: 2;
+	width: 50%;
+	text-align:center;
+	color: #31394D;
+	font-size: 28pt;
+	text-transform: capitalize;
+	text-decoration: none;
 }
 .tool {
 	color: #31394D;
