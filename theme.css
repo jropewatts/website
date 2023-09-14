@@ -51,18 +51,18 @@ p.col {
 	width: 50%;
 	text-align:center;
 	color: #31394D;
-	font-size: 28pt;
+	font-size: 26pt;
 	text-transform: capitalize;
 	text-decoration: none;
 }
-	.tool {
+p.tool {
 	color: #31394D;
 	font-size: 28pt;
 	text-decoration: none;
 	text-align: center;
 	text-decoration: none;
 }
-	.Twitter{
+img.Twitter{
 	max-width:100%;
 	height:auto;
 	display: block;
@@ -71,28 +71,28 @@ p.col {
 	width: 3%;
 	background-color:#edede8;
 }
-	.insta{
+img.insta{
 	display: block;
         margin-left: auto;
         margin-right: auto;
         width: 3%;
         background-color:#edede8;
 }
-	.youtube{
+img.youtube{
 	display: block;
         margin-left: auto;
         margin-right: auto;
         width: 3%;
         background-color:#edede8;
 }
-	.Twitch{
+img.Twitch{
 	   display: block;
            margin-left: auto;
            margin-right: auto;
            width: 3%;
            background-color:#edede8;
 }
-	.Twitch2{
+img.Twitch2{
            display: block;
   	   margin-left: auto;
            margin-right: auto;
@@ -111,23 +111,23 @@ h2 {
 	font-size: 120%;
 	text-align: center;
  }	
-	.list {
+ul.list {
 	color: #31394D;
 	font-size: 100%;
 	
    }
-	.listtile{	
+p.listtile{	
 	color: #31394D;
 	font-size: 100%;	
 	text-decoration: underline;
  }	
-	.form {
+form.form {
 		padding-right:20%;
 		padding-left:20%;
 	color: #31394D;
 	font-size: 100%;
 	}
-	.support {
+p.support {
 	color: #31394D;
 	font-size: 120%;
 	text-align: center;
