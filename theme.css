@@ -37,7 +37,7 @@ footer {
 	 color: #31394D;
 	 font-size: 20pt;
 	 }	
-	.logo {
+img.logo {
 	max-width:100%;
 	height:auto;	   
 	display: block;
@@ -46,7 +46,7 @@ footer {
 	width: 20%;
 	padding-top:10px;
 }
-	.col {
+p.col {
 	column-count: 2;
 	width: 50%;
 	text-align:center;
