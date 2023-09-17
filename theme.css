@@ -14,20 +14,25 @@ h1.topline {
 	font-size: 30pt;
 	text-transform: capitalize;
 	text-decoration: none;
+	text-align: center;
  }	
 h1.secondline {
 	padding-top:50px;
 	font-size: 30pt;
 	text-transform: capitalize;
 	text-decoration: none;
+	text-align: center;
  }	
 h1.thirdline {
 	font-size: 28pt;
 	text-transform: capitalize;
-	text-decoration: none;}
+	text-decoration: none;
+	text-align: center;
+}
 footer {
 	 padding-top:50px;
 	 font-size: 15pt;
+	text-align: center;
 	 }	
 img.logo {
 	max-width:100%;
@@ -44,6 +49,7 @@ p.col {
 	font-size: 26pt;
 	text-transform: capitalize;
 	text-decoration: none;
+	text-align: center;
 }
 p.tool {
 	font-size: 28pt;
