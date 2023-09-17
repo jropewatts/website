@@ -11,31 +11,23 @@ a {
  }	 
 h1.topline {
 	padding-top:100px;
-	color: #31394D;
 	font-size: 30pt;
 	text-transform: capitalize;
-	text-align: center;
 	text-decoration: none;
  }	
 h1.secondline {
 	padding-top:50px;
-	color: #31394D;
 	font-size: 30pt;
 	text-transform: capitalize;
-	text-align: center;
 	text-decoration: none;
  }	
 h1.thirdline {
-	color: #31394D;
 	font-size: 28pt;
 	text-transform: capitalize;
-	text-align: center;
 	text-decoration: none;}
 footer {
 	 padding-top:50px;
-	 text-align:center;
-	 color: #31394D;
-	 font-size: 20pt;
+	 font-size: 15pt;
 	 }	
 img.logo {
 	max-width:100%;
@@ -49,18 +41,14 @@ img.logo {
 p.col {
 	column-count: 2;
 	width: 50%;
-	text-align:center;
-	color: #31394D;
 	font-size: 26pt;
 	text-transform: capitalize;
 	text-decoration: none;
 }
 p.tool {
-	color: #31394D;
 	font-size: 28pt;
 	text-decoration: none;
-	text-align: center;
-	text-decoration: none;
+	
 }
 img.Twitter{
 	max-width:100%;
@@ -100,24 +88,23 @@ img.Twitch2{
            background-color:#edede8;
 }
 h3.page {
-        color: #31394D;
-	font-size: 5pt;
+ 	font-size: 5pt;
 	text-transform: capitalize;
-	text-align: center;
- }	
+	
+}	
 h2 {
-        color: #31394D;
+     
 	padding-left: 10%;
 	font-size: 120%;
-	text-align: center;
+	
  }	
 ul.list {
-	color: #31394D;
+	
 	font-size: 100%;
 	text-align: left;
    }
 p.listtile{	
-	color: #31394D;
+	
 	font-size: 100%;	
 	text-decoration: underline;
 	text-align: left;
@@ -125,17 +112,15 @@ p.listtile{
 form.form {
 	padding-right:20%;
 	padding-left:20%;
-	color: #31394D;
 	font-size: 100%;
 	}
+
 p.support {
-	color: #31394D;
 	font-size: 120%;
 	text-align: center;
 }
 
 p {
-	color: #31394D;
 	font-size: 100%;
 	text-align: left;
    }
