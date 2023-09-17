@@ -7,7 +7,7 @@ body {
 	align-items: center;
 }
 a {
-		text-decoration: none;	
+	text-decoration: none;	
  }	 
 h1.topline {
 	padding-top:100px;
@@ -114,16 +114,17 @@ h2 {
 ul.list {
 	color: #31394D;
 	font-size: 100%;
-	
+	text-align: left;
    }
 p.listtile{	
 	color: #31394D;
 	font-size: 100%;	
 	text-decoration: underline;
+	text-align: left;
  }	
 form.form {
-		padding-right:20%;
-		padding-left:20%;
+	padding-right:20%;
+	padding-left:20%;
 	color: #31394D;
 	font-size: 100%;
 	}
@@ -132,3 +133,9 @@ p.support {
 	font-size: 120%;
 	text-align: center;
 }
+
+p {
+	color: #31394D;
+	font-size: 100%;
+	text-align: left;
+   }
