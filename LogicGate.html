@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="theme.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Demon Projects</title>
+<meta name="description" content="A Platform for tools for N4">
+<meta name="author" content="Demondeader">
+<meta name="copyright" content="DemonProjects.com">
+<meta name="robots" content="index, follow">
+</head>
+
+
+    <header id="header">
+     <a href="index.html"><img id="img" src="logo.svg"></a>
+     <nav id="nav-bar">
+    <ul id="nav-list">
+      <li><a class="nav-link" href="Tools.html">Tools</a></li>
+      <li><a class="nav-link" href="Projects.html">Projects</a></li>
+      <li><a class="nav-link" href="Support.html">Contact</a></li>
+	  <li><a class="nav-link" href="Gaming.html">Gaming</a></li>
+   </ul>
+  </nav>
+  </header>
+<body>
+
+<h1 class=secondline>Logic Gate</h1>
+
+<p>In SET there is a simple Gate Block. follow the below and make one in Tridium
+<br>If inC is True Out is inA
+<br>If inC is flase Out is inB</p>
+
+<p class=listtile>Intstuction</p>
+
+<p class=text>Open the Program Palette and drag the Program module on to the wire sheet.
+<br>Right click and select Program Editor
+<br>Copy and paste the script into the box.
+<br>then click on Slots and add the following.
+</p>
+
+<ul class=list> 
+<li>Right Click and Add Slot </li>
+<li>Name = out</li>
+<li>Type = baja StatusNumeric</li>
+<li>Flag = Summary</li>
+</ul>
+
+<p class=text> Add another 3 slot with the following</p>
+
+<ul class=list> 
+<li>Name = inA</li>
+<li>Type = baja StatusNumeric</li>
+<li>Flag = Summary and  Execute On Change</li>
+</ul>
+
+<ul class=list> 
+<li>Name = inB</li>
+<li>Type = baja StatusNumeric</li>
+<li>Flag = Summary and  Execute On Change</li>
+</ul>
+
+<ul class=list> 
+<li>Name = inC</li>
+<li>Type = baja StatusString</li>
+<li>Flag = Summary and  Execute On Change</li>
+</ul>
+ 
+<p class=text>Along the task bar near the find and replace symbol is a hammer click this and all being well the orange light next to "Program is up-to-date" hould to green</p>
+ <br>
+<p class=output>Script<br></p>
+
+	<textarea class=output id="output" rows="25" cols="100" style="width: 100%; height: auto;">
+public void onStart() throw Exception {
+	//Startup code
+}
+	
+public void onExecute () thrown Exception (
+	// Execute code (set executeOnChange flag on inputs)
+BStatusNumeric inA = getInA ();
+BStatusNumeric inB = getInB ();
+BStatusString inC = getInB ();
+BStatusNumeric inA = getInA ();
+	
+boolean booleanC = Boolean.parseBoolean(inC.getValue()); // Convert the stringto boolean
+	
+if (booleanC) {
+   out.setValue(inA.getValue());
+   } else {
+   out.setValue(inB.getValue());
+   }
+ }
+	 
+Public void onStop() throws Exception {
+	//Shutdown code here
+}</textarea></p>
+	
+	 <button onclick="copyToClipboard()">Copy text</button>
+
+
+  <button id="ClearFields" onclick="ClearFields()">Clear</button>
+
+ 
+<p class=tool>Tools socials</p>
+<p><a href="https://instagram.com/demondeader" target="_blank"><img src="Insta.svg"  class=insta></a></p>
+<p class=Gsocials>Gaming Socials</p>
+<ul id="menu">
+  <li><a href="https://twitter.com/demondeader" target="_blank"><img src="X.svg" class=Twitter></a></li>
+  <li><a href="https://www.youtube.com/@demondeader" target="_blank"><img src="Youtube.svg" class=youtube></a></li>
+  <li><a href="https://www.twitch.tv/demondeader" target="_blank"><img src="twitch.svg" class=Twitch></a></li>
+  </ul> 
+</P>
+
+<footer>
+@2023 Demonprojects.com<br>a simple page
+</footer>
+ 	
+</body>
+</html>
+
+<script>
+
+function copyToClipboard() {
+  let copyText = document.getElementById("output");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+
+function ClearFields() {
+  document.getElementById("select1").value = "";
+  document.getElementById("select2").value = "";
+  document.getElementById("select3").value = "";
+  document.getElementById("select4").value = "";
+  document.getElementById("output").value = "";
+}
+
+</script>
+
