@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="theme.css">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>963ConvertionV.2</title>
+<title>963ConvertionV4</title>
 <meta name="description" content="A Platform for tools for N4">
 <meta name="author" content="Demondeader">
 <meta name="copyright" content="DemonProjects.com">
@@ -25,7 +25,7 @@
   </header>
   
 <body>
-<h1 class=secondline> Welcome to the convertion tool <br>I am aware of a fault and will have this back up and running asap</h1>
+<h1 class=secondline> Welcome to the convertion tool</h1>
 <h1 class=thirdline> This tool allows you to take the 963 Export of the schematics and cover them quickly and easily to a useful IQvision version</h1>
 
 <p class=listtile>Instuction</p>
@@ -36,40 +36,48 @@
 <li> Once it is done click the copy button at the bottom of the output page and paste it back into the text editor in IQvison</li>
 <li> then change back to the PX editor and all being well great,</li>
  </ul>
- <p class=listtile>May need to added</p>
+ <p class=listtile>If It Errors</p>
  <ul class=list> 
-<li>* module name="converters"/ in the import* if it did not allow you to view in PX editor</li>
+<li>(module name="converters"/) may need to be add under the imports with<> if you have no BoundLabel on the page if it did not allow you to view in PX editor</li>
 </ul>
 <p class=listtile>Exceptions</p>
 <ul class=list> 
-<li> All time schedule (Z point) will not change and will still show as red flashing items on the page</li>
-<li> As it stands in this version all the history will need to be manually changed. The point on the page is currently set up as all sensors have a historyOrd that will not work</li>
-<li> All points display the label name and the point state if this needs to be changed this can be quickly done with find and replace in a text editor by finding '%displayName% ' and replacing it with nothing</li>
+<li> All G and B referance point will still show as red flashing items on the page</li>
 <li> Any issues at all submit them <a href="Support.html"> here </a></li>
  </ul>
-
-	<p>Font style example 
-    <textarea id="select1" rows="20" cols="100" style="width: 100%; height: 20px; text-align: left;">font="bold 12.0pt Arial"</textarea></p>
-	
-	<p>Font color example (if using, has to have the space before the word foreground)	
-    <textarea id="select2" rows="20" cols="100"style="width: 100%; height: 20px; text-align: left;"> foreground="#404040"</textarea></p>
-	
-	<p>Summary Tip (This string in the box displays L?? O?? Point Ref for trend)
+ <br>
+ <p style= "text-align:left;">Option</p>
+ 
+	<p style= "text-align:left;">Summary Tip (This string in the box displays L?? O?? Point Ref for trend)
     <textarea id="select3" rows="20" cols="100" style="width: 100%; height: 20px; text-align: left;">%parent.parent.parent.name% %parent.parent.name% %proxyExt.trendItemReference% = %.%</textarea></p>
 	
-	<p>Ord location
+	<p style= "text-align:left;">TEXT4 Ord location
     <textarea id="select4" rows="20" cols="100" style="width: 100%; height: 20px; text-align: left;">ord="station:|slot:/Drivers/TREND/SITE00001/</textarea></p>
 	
-	<p>effects (option none or color)
+	<p style= "text-align:left;">TEXT5 effects (option none or color)
     <textarea id="select5" rows="20" cols="100" style="width: 100%; height: 20px; text-align: left;">color</textarea></p>
 	
-	<p>
+	<p style= "text-align:left;">TEXT6 Label Format
+    <textarea id="select6" rows="20" cols="100" style="width: 100%; height: 20px; text-align: left;">%out.value%</textarea></p>
+	
+	
+	
+	
+	<p style= "text-align:left;">
 	963 string from text editor
-	<textarea id="text" rows="20" cols="100"style="width: 100%; height: 20%; text-align: left;" ></textarea></p>
+	<textarea id="text" rows="20" cols="100"style="width: 100%; height: 20%; text-align: left;" >
+<BoundLabel layout="400.0,314.0,100.0,30.0" text="COM_PORT:0/L12/O31/Z1" font="bold 10.0pt Arial" foreground="red" blink="true"/>
 
+    
+	</textarea></p>
+<!--<BoundLabel layout="176.0,114.0,17.0,17.0" text="192.168.30.17:10008/L11/O11/D37" font="bold 10.0pt Arial" foreground="red" blink="true"/>
+<BoundLabel layout="176.0,114.0,17.0,17.0" text="192.168.30.17:10008/L1/O101/K37" font="bold 10.0pt Arial" foreground="red" blink="true"/>
+<BoundLabel layout="176.0,114.0,17.0,17.0" text="192.168.30.17:10008/L11/O11/W137" font="bold 10.0pt Arial" foreground="red" blink="true"/>
+<BoundLabel layout="176.0,114.0,17.0,17.0" text="192.168.30.17:10008/L1/O101/Z3" font="bold 10.0pt Arial" foreground="red" blink="true"/>  
+<BoundLabel layout="176.0,114.0,17.0,17.0" text="192.168.30.17:10008/L1/O101/G3" font="bold 10.0pt Arial" foreground="red" blink="true"/> -->
 	<button onclick="convert()">Convert</button>
 	
-	<p>IQvison Friendly Output
+	<p style= "text-align:left;">IQvison Friendly Output
 	<textarea id="output" rows="20" cols="100" style="width: 100%; height: auto; text-align: left;"></textarea></p>
 	
     <button onclick="copyToClipboard()">Copy text</button> <button id="ClearFields" onclick="ClearFields()">Clear</button>
